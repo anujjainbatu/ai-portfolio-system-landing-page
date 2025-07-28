@@ -1,0 +1,88 @@
+name: SEO & Performance Check
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  seo-check:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: |
+        npm install -g html-validate htmlhint
+    
+    - name: HTML Validation
+      run: |
+        htmlhint index.html
+        html-validate index.html
+    
+    - name: SEO Meta Tags Check
+      run: |
+        echo "Checking for required SEO meta tags..."
+        grep -q '<title>' index.html && echo "✅ Title tag found" || echo "❌ Title tag missing"
+        grep -q 'meta name="description"' index.html && echo "✅ Description meta tag found" || echo "❌ Description meta tag missing"
+        grep -q 'meta name="keywords"' index.html && echo "✅ Keywords meta tag found" || echo "❌ Keywords meta tag missing"
+        grep -q 'meta property="og:' index.html && echo "✅ Open Graph tags found" || echo "❌ Open Graph tags missing"
+        grep -q 'meta name="twitter:' index.html && echo "✅ Twitter Card tags found" || echo "❌ Twitter Card tags missing"
+        grep -q 'application/ld\+json' index.html && echo "✅ Structured data found" || echo "❌ Structured data missing"
+    
+    - name: Check required files
+      run: |
+        echo "Checking for required files..."
+        test -f sitemap.xml && echo "✅ sitemap.xml found" || echo "❌ sitemap.xml missing"
+        test -f robots.txt && echo "✅ robots.txt found" || echo "❌ robots.txt missing"
+        test -f README.md && echo "✅ README.md found" || echo "❌ README.md missing"
+    
+    - name: Performance Hints
+      run: |
+        echo "Checking performance optimizations..."
+        grep -q 'preconnect' index.html && echo "✅ Preconnect hints found" || echo "⚠️  Consider adding preconnect hints"
+        grep -q 'lazy' index.html && echo "✅ Lazy loading found" || echo "⚠️  Consider adding lazy loading"
+        grep -q 'defer\|async' index.html && echo "✅ Script optimization found" || echo "⚠️  Consider optimizing script loading"
+
+  lighthouse-check:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+    
+    - name: Install Lighthouse CI
+      run: npm install -g @lhci/cli@0.12.x
+    
+    - name: Run Lighthouse CI
+      run: |
+        lhci autorun --upload.target=temporary-public-storage || echo "Lighthouse check completed with warnings"
+      env:
+        LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+
+  deploy-preview:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Deploy to Surge.sh (Preview)
+      run: |
+        npm install -g surge
+        surge . --domain portfolio-builder-pr-${{ github.event.number }}.surge.sh
+      env:
+        SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
+        SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}

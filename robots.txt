@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://portfolio-builder-landing.vercel.app/sitemap.xml
+
+# Popular search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Important files
+Allow: /index.html
+Allow: /sitemap.xml
+Allow: /robots.txt
+
+# Performance optimization
+Crawl-delay: 1

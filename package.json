@@ -1,0 +1,55 @@
+{
+  "name": "portfolio-builder-landing",
+  "version": "1.0.0",
+  "description": "SEO-optimized landing page for the revolutionary AI-powered portfolio builder",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx live-server --port=3001 --host=localhost",
+    "build": "echo 'Build complete - static HTML ready for deployment'",
+    "deploy": "echo 'Deploy to your preferred hosting platform'",
+    "preview": "npx live-server --port=3001 --host=localhost --no-browser",
+    "lint": "npx htmlhint index.html",
+    "validate": "npx html-validate index.html"
+  },
+  "keywords": [
+    "portfolio",
+    "website",
+    "builder",
+    "developer",
+    "AI",
+    "chatbot",
+    "free",
+    "template",
+    "landing-page",
+    "SEO",
+    "responsive",
+    "modern"
+  ],
+  "author": {
+    "name": "Anuj Jain",
+    "email": "anujjainbatu@gmail.com",
+    "url": "https://portfolio.anujjainbatu.tech"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anujjainbatu/portfolio-builder-landing.git"
+  },
+  "homepage": "https://portfolio-builder-landing.vercel.app",
+  "bugs": {
+    "url": "https://github.com/anujjainbatu/portfolio-builder-landing/issues"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "htmlhint": "^1.1.4",
+    "html-validate": "^8.7.4"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

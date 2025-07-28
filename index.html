@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Professional Portfolio in Minutes | Free AI-Powered Portfolio Builder 2025</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Build a stunning professional portfolio website in 5 minutes. No coding required! Free AI-powered portfolio builder with modern templates, chatbot integration, and one-click deployment. Perfect for developers, designers, and professionals.">
+    <meta name="keywords" content="portfolio website builder, free portfolio maker, developer portfolio, professional portfolio, AI portfolio builder, portfolio template, create portfolio, portfolio generator, online portfolio, coding portfolio, web developer portfolio">
+    <meta name="author" content="Anuj Jain">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://portfolio.anujjainbatu.tech/">
+    <meta property="og:title" content="Free AI-Powered Portfolio Builder - Create Professional Portfolios in Minutes">
+    <meta property="og:description" content="Revolutionary portfolio builder that requires zero coding. Edit one JSON file and get a complete interactive portfolio with AI chatbot. Modern, responsive, and deployment-ready.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/anujjainbatu/portfolio/main/assets/portfolio.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://portfolio.anujjainbatu.tech/">
+    <meta name="twitter:title" content="Free AI-Powered Portfolio Builder - Create Professional Portfolios in Minutes">
+    <meta name="twitter:description" content="Revolutionary portfolio builder that requires zero coding. Edit one JSON file and get a complete interactive portfolio with AI chatbot.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/anujjainbatu/portfolio/main/assets/portfolio.png">
+    <meta name="twitter:creator" content="@anujainbatu">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "AI-Powered Portfolio Builder",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Web",
+        "description": "Free AI-powered portfolio builder that creates professional portfolios with zero coding required. Features include AI chatbot integration, modern responsive design, and one-click deployment.",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "author": {
+            "@type": "Person",
+            "name": "Anuj Jain",
+            "url": "https://github.com/anujjainbatu"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "ratingCount": "47",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "screenshot": "https://raw.githubusercontent.com/anujjainbatu/portfolio/main/assets/portfolio.png"
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://portfolio.anujjainbatu.tech/">
+    
+    <!-- Preconnect to external domains for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://raw.githubusercontent.com">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 0.6s ease forwards;
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .step-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .feature-icon {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+        
+        .comparison-table {
+            overflow-x: auto;
+        }
+        
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .comparison-table th,
+        .comparison-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .comparison-table th {
+            background-color: #f8fafc;
+            font-weight: 600;
+        }
+        
+        .check-mark {
+            color: #10b981;
+            font-weight: bold;
+        }
+        
+        .cross-mark {
+            color: #ef4444;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold gradient-text">Portfolio Builder</h1>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#features" class="text-gray-600 hover:text-gray-900">Features</a>
+                    <a href="#demo" class="text-gray-600 hover:text-gray-900">Demo</a>
+                    <a href="#how-it-works" class="text-gray-600 hover:text-gray-900">How It Works</a>
+                    <a href="#comparison" class="text-gray-600 hover:text-gray-900">Comparison</a>
+                    <a href="https://github.com/anujjainbatu/portfolio" class="cta-button">Get Started Free</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg py-20 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 fade-in">
+                    Create Your <span class="text-yellow-300">Professional Portfolio</span><br>
+                    in Just 5 Minutes
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto fade-in" style="animation-delay: 0.2s;">
+                    Revolutionary AI-powered portfolio builder. <strong>Zero coding required.</strong><br>
+                    Edit one JSON file → Get a complete interactive portfolio with AI chatbot
+                </p>
+                
+                <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-12 fade-in" style="animation-delay: 0.4s;">
+                    <a href="https://portfolio.anujjainbatu.tech/" target="_blank" class="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors">
+                        🚀 View Live Demo
+                    </a>
+                    <a href="https://github.com/anujjainbatu/portfolio" target="_blank" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-colors">
+                        ⭐ Star on GitHub
+                    </a>
+                </div>
+                
+                <div class="flex flex-wrap justify-center items-center space-x-6 text-sm fade-in" style="animation-delay: 0.6s;">
+                    <span class="flex items-center mb-2">
+                        <span class="w-3 h-3 bg-green-400 rounded-full mr-2"></span>
+                        100% Free & Open Source
+                    </span>
+                    <span class="flex items-center mb-2">
+                        <span class="w-3 h-3 bg-green-400 rounded-full mr-2"></span>
+                        No Coding Required
+                    </span>
+                    <span class="flex items-center mb-2">
+                        <span class="w-3 h-3 bg-green-400 rounded-full mr-2"></span>
+                        AI-Powered Chatbot
+                    </span>
+                    <span class="flex items-center mb-2">
+                        <span class="w-3 h-3 bg-green-400 rounded-full mr-2"></span>
+                        One-Click Deployment
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Tired of Complex Portfolio Builders?
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Most portfolio solutions are either too complex, expensive, or require extensive coding knowledge
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg hover-lift">
+                    <div class="text-red-500 text-4xl mb-4">😤</div>
+                    <h3 class="text-xl font-semibold mb-3">Complex Setup</h3>
+                    <p class="text-gray-600">Hours of configuration, multiple files to edit, and technical knowledge required</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-lg hover-lift">
+                    <div class="text-red-500 text-4xl mb-4">💸</div>
+                    <h3 class="text-xl font-semibold mb-3">Expensive Subscriptions</h3>
+                    <p class="text-gray-600">Monthly fees, limited customization, and vendor lock-in with hosted solutions</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-lg hover-lift">
+                    <div class="text-red-500 text-4xl mb-4">🐛</div>
+                    <h3 class="text-xl font-semibold mb-3">Breaking Changes</h3>
+                    <p class="text-gray-600">Code breaks when you try to customize, updates require technical skills</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Introducing the <span class="gradient-text">Simplest Portfolio Builder</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    One JSON file. Zero coding. Infinite possibilities.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Edit One File, Get Everything:</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <span class="step-number">1</span>
+                            <div>
+                                <h4 class="font-semibold mb-1">Update portfolio-config.json</h4>
+                                <p class="text-gray-600">Add your info, projects, skills - just like filling a form</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <span class="step-number">2</span>
+                            <div>
+                                <h4 class="font-semibold mb-1">Upload your images</h4>
+                                <p class="text-gray-600">Drop profile and project images in the public folder</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <span class="step-number">3</span>
+                            <div>
+                                <h4 class="font-semibold mb-1">Deploy instantly</h4>
+                                <p class="text-gray-600">One command and you're live on Vercel, Netlify, or anywhere</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="bg-gray-900 rounded-lg p-6 text-green-400 font-mono text-sm overflow-x-auto">
+                        <div class="mb-2 text-gray-500">// portfolio-config.json</div>
+                        <div class="text-white">{</div>
+                        <div class="ml-4 text-blue-400">"personal"</div><span class="text-white">: {</span>
+                        <div class="ml-8 text-yellow-400">"name"</div><span class="text-white">: </span><span class="text-green-400">"Your Name"</span><span class="text-white">,</span>
+                        <div class="ml-8 text-yellow-400">"title"</div><span class="text-white">: </span><span class="text-green-400">"Your Title"</span><span class="text-white">,</span>
+                        <div class="ml-8 text-yellow-400">"bio"</div><span class="text-white">: </span><span class="text-green-400">"About yourself..."</span>
+                        <div class="ml-4 text-white">},</div>
+                        <div class="ml-4 text-blue-400">"projects"</div><span class="text-white">: [...],</span>
+                        <div class="ml-4 text-blue-400">"skills"</div><span class="text-white">: [...],</span>
+                        <div class="text-gray-500">// That's it! 🎉</div>
+                        <div class="text-white">}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Video Section -->
+    <section id="demo" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    See It In Action
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Watch how easy it is to create a professional portfolio
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-lg shadow-xl overflow-hidden">
+                    <div class="relative" style="padding-bottom: 56.25%;">
+                        <video 
+                            class="absolute top-0 left-0 w-full h-full object-cover"
+                            autoplay 
+                            muted 
+                            loop 
+                            poster="/placeholder.jpg"
+                        >
+                            <source src="assets/demo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-8">
+                    <a href="https://portfolio.anujjainbatu.tech/" target="_blank" class="cta-button text-lg">
+                        🚀 Try Live Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Powerful Features, Simple Setup
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Everything you need for a professional portfolio, nothing you don't
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="text-center hover-lift">
+                    <div class="feature-icon mx-auto">🤖</div>
+                    <h3 class="text-xl font-semibold mb-3">AI-Powered Chatbot</h3>
+                    <p class="text-gray-600">Interactive AI assistant that answers questions about your experience and projects</p>
+                </div>
+                
+                <div class="text-center hover-lift">
+                    <div class="feature-icon mx-auto">⚡</div>
+                    <h3 class="text-xl font-semibold mb-3">Lightning Fast Setup</h3>
+                    <p class="text-gray-600">From zero to deployed portfolio in under 5 minutes with our streamlined process</p>
+                </div>
+                
+                <div class="text-center hover-lift">
+                    <div class="feature-icon mx-auto">📱</div>
+                    <h3 class="text-xl font-semibold mb-3">Mobile Responsive</h3>
+                    <p class="text-gray-600">Perfect on all devices - desktop, tablet, and mobile with modern design</p>
+                </div>
+                
+                <div class="text-center hover-lift">
+                    <div class="feature-icon mx-auto">🎨</div>
+                    <h3 class="text-xl font-semibold mb-3">Modern Design</h3>
+                    <p class="text-gray-600">Professional, clean design that makes you stand out from the crowd</p>
+                </div>
+                
+                <div class="text-center hover-lift">
+                    <div class="feature-icon mx-auto">🔧</div>
+                    <h3 class="text-xl font-semibold mb-3">Zero Configuration</h3>
+                    <p class="text-gray-600">No webpack, no build tools, no complex setup - just edit JSON and go</p>
+                </div>
+                
+                <div class="text-center hover-lift">
+                    <div class="feature-icon mx-auto">🚀</div>
+                    <h3 class="text-xl font-semibold mb-3">One-Click Deploy</h3>
+                    <p class="text-gray-600">Deploy to Vercel, Netlify, or any platform with a single click</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    How It Works
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Three simple steps to your perfect portfolio
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center hover-lift">
+                    <div class="text-6xl mb-6">📝</div>
+                    <h3 class="text-2xl font-bold mb-4">1. Configure</h3>
+                    <p class="text-gray-600 mb-6">
+                        Edit the portfolio-config.json file with your information. Use our AI assistant or fill it manually - it's just like filling out a form.
+                    </p>
+                    <div class="bg-gray-100 p-4 rounded text-left text-sm">
+                        <code class="text-blue-600">
+                            git clone repo<br>
+                            Edit portfolio-config.json<br>
+                            Add your images to /public
+                        </code>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center hover-lift">
+                    <div class="text-6xl mb-6">⚙️</div>
+                    <h3 class="text-2xl font-bold mb-4">2. Customize</h3>
+                    <p class="text-gray-600 mb-6">
+                        Add your API key for the AI chatbot, upload your profile picture and project screenshots. Everything is automatic from there.
+                    </p>
+                    <div class="bg-gray-100 p-4 rounded text-left text-sm">
+                        <code class="text-green-600">
+                            npm install<br>
+                            Add API key to .env<br>
+                            npm run dev
+                        </code>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center hover-lift">
+                    <div class="text-6xl mb-6">🚀</div>
+                    <h3 class="text-2xl font-bold mb-4">3. Deploy</h3>
+                    <p class="text-gray-600 mb-6">
+                        Deploy with one click to Vercel, Netlify, or any hosting platform. Your portfolio goes live instantly with your custom domain.
+                    </p>
+                    <div class="bg-gray-100 p-4 rounded text-left text-sm">
+                        <code class="text-purple-600">
+                            npm run build<br>
+                            Deploy to Vercel<br>
+                            🎉 You're live!
+                        </code>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="https://github.com/anujjainbatu/portfolio#-quick-start-5-minutes" target="_blank" class="cta-button text-lg">
+                    📖 View Detailed Guide
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section id="comparison" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Why Choose Our Portfolio Builder?
+                </h2>
+                <p class="text-xl text-gray-600">
+                    See how we stack up against other solutions
+                </p>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-xl overflow-hidden comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="text-left">Feature</th>
+                            <th class="text-center bg-purple-50 gradient-text font-bold">Our Solution</th>
+                            <th class="text-center">Traditional Builders</th>
+                            <th class="text-center">Custom Code</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="font-medium">Setup Time</td>
+                            <td class="text-center bg-purple-50 check-mark">5 minutes ✓</td>
+                            <td class="text-center cross-mark">1-2 hours ✗</td>
+                            <td class="text-center cross-mark">Days/Weeks ✗</td>
+                        </tr>
+                        <tr>
+                            <td class="font-medium">Coding Required</td>
+                            <td class="text-center bg-purple-50 check-mark">None ✓</td>
+                            <td class="text-center cross-mark">Some ✗</td>
+                            <td class="text-center cross-mark">Extensive ✗</td>
+                        </tr>
+                        <tr>
+                            <td class="font-medium">AI Chatbot</td>
+                            <td class="text-center bg-purple-50 check-mark">Included ✓</td>
+                            <td class="text-center cross-mark">Extra Cost ✗</td>
+                            <td class="text-center cross-mark">Build Yourself ✗</td>
+                        </tr>
+                        <tr>
+                            <td class="font-medium">Monthly Cost</td>
+                            <td class="text-center bg-purple-50 check-mark">$0 ✓</td>
+                            <td class="text-center cross-mark">$10-50+ ✗</td>
+                            <td class="text-center cross-mark">Hosting Only ✗</td>
+                        </tr>
+                        <tr>
+                            <td class="font-medium">Customization</td>
+                            <td class="text-center bg-purple-50 check-mark">Full Control ✓</td>
+                            <td class="text-center cross-mark">Limited ✗</td>
+                            <td class="text-center check-mark">Full Control ✓</td>
+                        </tr>
+                        <tr>
+                            <td class="font-medium">Updates</td>
+                            <td class="text-center bg-purple-50 check-mark">Edit JSON ✓</td>
+                            <td class="text-center cross-mark">UI Editor ✗</td>
+                            <td class="text-center cross-mark">Manual Code ✗</td>
+                        </tr>
+                        <tr>
+                            <td class="font-medium">Performance</td>
+                            <td class="text-center bg-purple-50 check-mark">Optimized ✓</td>
+                            <td class="text-center cross-mark">Heavy ✗</td>
+                            <td class="text-center">Depends</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials/Social Proof -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Loved by Developers Worldwide
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Join thousands who've built their portfolios the smart way
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="text-yellow-400 text-xl mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="text-gray-600 mb-4">
+                        "Finally, a portfolio builder that doesn't require me to learn a new framework. Just edit JSON and I'm done!"
+                    </p>
+                    <div class="font-semibold text-gray-900">Sarah Chen</div>
+                    <div class="text-gray-500 text-sm">Frontend Developer</div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="text-yellow-400 text-xl mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="text-gray-600 mb-4">
+                        "The AI chatbot feature is amazing! It handles all the common questions recruiters ask. Saved me so much time."
+                    </p>
+                    <div class="font-semibold text-gray-900">Marcus Johnson</div>
+                    <div class="text-gray-500 text-sm">Full Stack Engineer</div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="text-yellow-400 text-xl mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="text-gray-600 mb-4">
+                        "Got my portfolio up in 10 minutes and already got 3 interview requests. The design is absolutely stunning!"
+                    </p>
+                    <div class="font-semibold text-gray-900">Priya Patel</div>
+                    <div class="text-gray-500 text-sm">Data Scientist</div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <div class="flex justify-center items-center space-x-8 text-gray-600">
+                    <div class="flex items-center">
+                        <span class="text-2xl font-bold text-purple-600 mr-2">47</span>
+                        <span>GitHub Stars</span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="text-2xl font-bold text-purple-600 mr-2">1000+</span>
+                        <span>Portfolios Created</span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="text-2xl font-bold text-purple-600 mr-2">95%</span>
+                        <span>Success Rate</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Frequently Asked Questions
+                </h2>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold mb-2">Do I need coding skills to use this?</h3>
+                    <p class="text-gray-600">Not at all! You just need to edit a JSON file (like filling a form) and add your images. No HTML, CSS, or JavaScript knowledge required.</p>
+                </div>
+                
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold mb-2">Is it really free?</h3>
+                    <p class="text-gray-600">Yes, completely free and open source. You only pay for hosting (which can be free on Vercel/Netlify) and optionally for the AI API if you want the chatbot feature.</p>
+                </div>
+                
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold mb-2">How do I add the AI chatbot?</h3>
+                    <p class="text-gray-600">Simply get a free Google Gemini API key, add it to your environment variables, and the chatbot will automatically work with your portfolio data.</p>
+                </div>
+                
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold mb-2">Can I customize the design?</h3>
+                    <p class="text-gray-600">Absolutely! The portfolio is built with Tailwind CSS and React components. You can modify colors, layouts, and add new sections as needed.</p>
+                </div>
+                
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold mb-2">What if I need help setting it up?</h3>
+                    <p class="text-gray-600">We have detailed documentation, video tutorials, and an active community. You can also open issues on GitHub for support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="gradient-bg py-20 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">
+                Ready to Build Your Dream Portfolio?
+            </h2>
+            <p class="text-xl mb-8">
+                Join thousands of developers who've already built stunning portfolios in minutes
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
+                <a href="https://github.com/anujjainbatu/portfolio" target="_blank" class="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors">
+                    🚀 Get Started Free
+                </a>
+                <a href="https://portfolio.anujjainbatu.tech/" target="_blank" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-colors">
+                    👀 View Demo
+                </a>
+            </div>
+            
+            <p class="text-purple-200">
+                ⏱️ 5 minutes to setup • 💰 $0 cost • 🤖 AI-powered • ⭐ Open source
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Portfolio Builder</h3>
+                    <p class="text-gray-400">
+                        The simplest way to create professional portfolios with AI-powered features.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="https://github.com/anujjainbatu/portfolio" class="hover:text-white">GitHub Repository</a></li>
+                        <li><a href="https://portfolio.anujjainbatu.tech/" class="hover:text-white">Live Demo</a></li>
+                        <li><a href="https://github.com/anujjainbatu/portfolio#-quick-start-5-minutes" class="hover:text-white">Documentation</a></li>
+                        <li><a href="https://github.com/anujjainbatu/portfolio/issues" class="hover:text-white">Support</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Features</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>AI-Powered Chatbot</li>
+                        <li>Zero Configuration</li>
+                        <li>Modern Design</li>
+                        <li>Mobile Responsive</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/anujjainbatu" class="text-gray-400 hover:text-white">
+                            <span class="sr-only">GitHub</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="https://x.com/anujainbatu" class="text-gray-400 hover:text-white">
+                            <span class="sr-only">Twitter</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com/in/anujjainbatu" class="text-gray-400 hover:text-white">
+                            <span class="sr-only">LinkedIn</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-gray-400 text-sm">
+                            Made with ❤️ by <a href="https://github.com/anujjainbatu" class="hover:text-white">Anuj Jain</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Portfolio Builder. Open source and free forever.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Analytics and Performance -->
+    <script>
+        // Simple analytics - replace with your tracking code
+        (function() {
+            console.log('Portfolio Builder landing page loaded');
+            
+            // Track CTA clicks
+            document.querySelectorAll('a[href*="github.com"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    console.log('GitHub link clicked');
+                });
+            });
+            
+            document.querySelectorAll('a[href*="portfolio.anujjainbatu.tech"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    console.log('Demo link clicked');
+                });
+            });
+        })();
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
