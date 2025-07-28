@@ -1,9 +1,6 @@
 # 🚀 Portfolio Builder Landing Page
 
-<video width="100%" controls>
-  <source src="assets/demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+![Portfolio Preview](assets/portfolio.png)
 
 Create stunning developer portfolios in 5 minutes with zero coding required.
 
@@ -32,7 +29,6 @@ Help us improve the portfolio builder:
 ## 📞 Support
 
 - **Email**: anujjainbatu@gmail.com
-- **Twitter**: [@anujainbatu](https://twitter.com/anujainbatu)
 
 ---
 
